@@ -60,7 +60,7 @@ var _ = Describe("Legacy Options", func() {
 			opts.InjectRequestHeaders = []Header{
 				{
 					Name:                 "X-Forwarded-Groups",
-					PreserveRequestValue: false,
+					PreserveRequestValue: true,
 					Values: []HeaderValue{
 						{
 							ClaimSource: &ClaimSource{
@@ -71,7 +71,7 @@ var _ = Describe("Legacy Options", func() {
 				},
 				{
 					Name:                 "X-Forwarded-User",
-					PreserveRequestValue: false,
+					PreserveRequestValue: true,
 					Values: []HeaderValue{
 						{
 							ClaimSource: &ClaimSource{
@@ -82,7 +82,7 @@ var _ = Describe("Legacy Options", func() {
 				},
 				{
 					Name:                 "X-Forwarded-Email",
-					PreserveRequestValue: false,
+					PreserveRequestValue: true,
 					Values: []HeaderValue{
 						{
 							ClaimSource: &ClaimSource{
@@ -93,7 +93,7 @@ var _ = Describe("Legacy Options", func() {
 				},
 				{
 					Name:                 "X-Forwarded-Preferred-Username",
-					PreserveRequestValue: false,
+					PreserveRequestValue: true,
 					Values: []HeaderValue{
 						{
 							ClaimSource: &ClaimSource{

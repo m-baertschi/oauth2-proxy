@@ -191,6 +191,10 @@ func (l *LegacyHeaders) getRequestHeaders() []Header {
 		requestHeaders = append(requestHeaders, getAuthorizationHeader())
 	}
 
+	for i := range requestHeaders {
+		requestHeaders[i].PreserveRequestValue = !l.SkipAuthStripHeaders
+	}
+
 	return requestHeaders
 }
 
